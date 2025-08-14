@@ -146,7 +146,7 @@ body {
 
 /* Estilo para a imagem no rodapé */
 .footer-image {
-    max-width: 100x; /* Define uma largura máxima de 50 pixels */
+    max-width: 300px; /* Define uma largura máxima de 50 pixels */
     height: auto;    /* Mantém a proporção da imagem */
     display: block;
     margin: 0 auto;
