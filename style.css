@@ -1,1 +1,170 @@
 
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap');
+
+/* Cores e variáveis temáticas do filme */
+:root {
+    --roxo-escuro: #2c0b3b;
+    --roxo-claro: #4c2c5c;
+    --azul-petroleo: #1e394f;
+    --cinza-claro: #c2c2c2;
+    --cinza-escuro: #4a4a4a;
+    --branco-puro: #ffffff;
+}
+
+body {
+    font-family: 'Gothic A1', sans-serif;
+    background-color: var(--roxo-escuro);
+    color: var(--cinza-claro);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo do cabeçalho */
+.header-container {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--roxo-claro);
+    background-color: var(--roxo-escuro);
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--branco-puro);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Conteúdo principal e animações */
+.main-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex-grow: 1;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.intro-text {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--cinza-claro);
+}
+
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.feature-card {
+    background-color: var(--azul-petroleo);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    flex-basis: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card h3 {
+    color: var(--branco-puro);
+    font-size: 1.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--roxo-claro);
+    padding-bottom: 0.5rem;
+}
+
+/* Animações de entrada */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInAnimation 1s forwards;
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpAnimation 1s forwards;
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Atrasos para as animações */
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+
+/* Estilo do rodapé com degradê */
+.footer-gradient {
+    padding: 2rem;
+    text-align: center;
+    color: var(--cinza-claro);
+    background: linear-gradient(to top, var(--roxo-escuro), var(--azul-petroleo), rgba(0,0,0,0));
+    margin-top: 3rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2rem;
+    }
+    .features-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-card {
+        width: 100%;
+    }
+  }
