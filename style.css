@@ -137,173 +137,19 @@ body {
     animation: fadeInAnimation 1s forwards;
 }
 
-/* Importação da nova fonte 'Dancing Script' */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Gothic+A1:wght@400;700&display=swap');
-
-/* Cores e variáveis temáticas do filme */
-:root {
-    --roxo-escuro: #2c0b3b;
-    --roxo-claro: #4c2c5c;
-    --azul-petroleo: #1e394f;
-    --cinza-claro: #c2c2c2;
-    --cinza-escuro: #4a4a4a;
-    --branco-puro: #ffffff;
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-body {
-    font-family: 'Gothic A1', sans-serif;
-    background-color: var(--roxo-escuro);
-    color: var(--cinza-claro);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Estilo do cabeçalho */
-.header-container {
-    text-align: center;
-    padding: 3rem 0;
-    border-bottom: 2px solid var(--roxo-claro);
-    background-color: var(--roxo-escuro);
-}
-
-.header-title {
-    font-family: 'Dancing Script', cursive;
-    font-size: 5rem;
-    font-weight: 700;
-    color: var(--branco-puro);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    letter-spacing: 5px;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
-}
-
-/* Conteúdo principal e animações */
-.main-content {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-    flex-grow: 1;
-    position: relative;
-    overflow: hidden;
-}
-
-.image-container {
-    text-align: center;
-    margin-bottom: 2rem;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
+/* Estilo para a imagem no rodapé */
+.footer-image {
+    max-width: 50px; /* Define uma largura máxima de 50 pixels */
+    height: auto;    /* Mantém a proporção da imagem */
     display: block;
-    transition: transform 0.5s ease-in-out;
-}
-
-.hero-image:hover {
-    transform: scale(1.05);
-}
-
-.text-with-background {
-    position: relative;
-    padding: 2rem 0;
-}
-
-.text-content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-}
-
-.intro-text, .inspiration-text, .sustainability-text {
-    font-size: 1.25rem;
-    font-style: italic;
-    color: var(--cinza-claro);
-    margin-bottom: 2rem;
-}
-
-.animated-text {
-    display: inline-block;
-}
-
-.animated-text span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.background-image {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120%;
-    height: 1000px; /* Altura aumentada para cobrir o novo texto */
-    background-image: url('https://images.unsplash.com/photo-1551024709-24198a22a5c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: 1;
-    border-radius: 10px;
-}
-
-/* Estilo do rodapé com degradê */
-.footer-gradient {
-    padding: 2rem;
-    text-align: center;
-    color: var(--cinza-claro);
-    background: linear-gradient(to top, var(--roxo-escuro), var(--azul-petroleo), rgba(0,0,0,0));
-    margin-top: 3rem;
-    position: relative;
-    z-index: 20;
-}
-
-/* Animações de entrada */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInAnimation 1s forwards;
-}
-
-@keyframes fadeInAnimation {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-footer-image {
-max-width: 50px; /* Define uma largura máxima de 50 pixels /
-height: auto;    / Mantém a proporção da imagem */
-display: block;
-margin: 0 auto;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .header-title {
-        font-size: 3.5rem;
-    }
-    .background-image {
-        height: 700px;
-    }
-}
-@keyframes fadeInAnimation {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    margin: 0 auto;
 }
 
 /* Responsividade */
